@@ -1,0 +1,340 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.miOntologia.org/ciberseguridad"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.miOntologia.org/ciberseguridad">
+    <Prefix name="" IRI="urn:absolute:h/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Representar conceptos clave de ciberseguridad para apoyar el análisis de riesgos.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Activo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Amenaza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Antivirus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ataque_DDoS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Autenticación_Doble_Factor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Base_Datos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Configuración_Incorrecta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Control"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cuenta_Correo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Falta_Parche"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Firewall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Malware"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Phishing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Política"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Política_Acceso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Política_Backup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Política_Contraseñas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Servidor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Software_Desactualizado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vulnerabilidad"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#protegidoPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#1._afecta"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#2._mitiga"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#3._requiere"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#criticidad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fechaDetección"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nivelRiesgo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Antivirus_Kaspersky"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Base_Datos_Empresa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cuenta_Correo_Empresa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FirewallCisco"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Malware_Ransomware"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Malware_Troyano"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Phishing_Bancario"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Phishing_Corporativo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Política_Backup_Semanal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Política_Contraseñas_Fuertes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Servidor_Web"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vuln_Config"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vuln_Software"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Activo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#protegidoPor"/>
+            <Class IRI="#Control"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Antivirus"/>
+        <Class IRI="#Control"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ataque_DDoS"/>
+        <Class IRI="#Amenaza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Autenticación_Doble_Factor"/>
+        <Class IRI="#Control"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Base_Datos"/>
+        <Class IRI="#Activo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Configuración_Incorrecta"/>
+        <Class IRI="#Vulnerabilidad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cuenta_Correo"/>
+        <Class IRI="#Activo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Falta_Parche"/>
+        <Class IRI="#Vulnerabilidad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Firewall"/>
+        <Class IRI="#Control"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Malware"/>
+        <Class IRI="#Amenaza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Phishing"/>
+        <Class IRI="#Amenaza"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Política_Backup"/>
+        <Class IRI="#Política"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Política_Contraseñas"/>
+        <Class IRI="#Política"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Servidor"/>
+        <Class IRI="#Activo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Software_Desactualizado"/>
+        <Class IRI="#Vulnerabilidad"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Control"/>
+        <NamedIndividual IRI="#Antivirus_Kaspersky"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Activo"/>
+        <NamedIndividual IRI="#Base_Datos_Empresa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cuenta_Correo"/>
+        <NamedIndividual IRI="#Cuenta_Correo_Empresa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Control"/>
+        <NamedIndividual IRI="#FirewallCisco"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Malware"/>
+        <NamedIndividual IRI="#Malware_Ransomware"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Malware"/>
+        <NamedIndividual IRI="#Malware_Troyano"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Phishing"/>
+        <NamedIndividual IRI="#Phishing_Bancario"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Phishing"/>
+        <NamedIndividual IRI="#Phishing_Corporativo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Política"/>
+        <NamedIndividual IRI="#Política_Backup_Semanal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Política"/>
+        <NamedIndividual IRI="#Política_Contraseñas_Fuertes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Activo"/>
+        <NamedIndividual IRI="#Servidor_Web"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vulnerabilidad"/>
+        <NamedIndividual IRI="#Vuln_Config"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vulnerabilidad"/>
+        <NamedIndividual IRI="#Vuln_Software"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#2._mitiga"/>
+        <NamedIndividual IRI="#FirewallCisco"/>
+        <NamedIndividual IRI="#Phishing_Corporativo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#1._afecta"/>
+        <NamedIndividual IRI="#Phishing_Corporativo"/>
+        <NamedIndividual IRI="#Cuenta_Correo_Empresa"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nivelRiesgo"/>
+        <NamedIndividual IRI="#Phishing_Corporativo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#criticidad"/>
+        <NamedIndividual IRI="#Servidor_Web"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">5</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#protegidoPor"/>
+        <Class IRI="#Activo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#1._afecta"/>
+        <Class IRI="#Amenaza"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#2._mitiga"/>
+        <Class IRI="#Control"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#3._requiere"/>
+        <Class IRI="#Política"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#protegidoPor"/>
+        <Class IRI="#Control"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#1._afecta"/>
+        <Class IRI="#Activo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#2._mitiga"/>
+        <Class IRI="#Amenaza"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#3._requiere"/>
+        <Class IRI="#Control"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#criticidad"/>
+        <Class IRI="#Activo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#fechaDetección"/>
+        <Class IRI="#Vulnerabilidad"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nivelRiesgo"/>
+        <Class IRI="#Amenaza"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#criticidad"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#fechaDetección"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nivelRiesgo"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Amenaza</IRI>
+        <Literal>Evento que puede comprometer la seguridad de un activo.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
